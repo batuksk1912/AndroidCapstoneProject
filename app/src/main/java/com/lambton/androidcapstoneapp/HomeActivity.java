@@ -10,6 +10,7 @@ public class HomeActivity extends MainActivity {
     TextView nameTv;
     TextView emailTv;
     Button logoutbtn;
+    Button showSamples;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class HomeActivity extends MainActivity {
         emailTv = findViewById(R.id.emailTv);
         emailTv.setText(sharedPreferences.getString("email",""));
         logoutbtn = findViewById(R.id.logoutBtn);
+        showSamples = findViewById(R.id.sampleBtn2);
 
         //make logout
         logoutbtn.setOnClickListener(new View.OnClickListener() {
@@ -39,6 +41,17 @@ public class HomeActivity extends MainActivity {
                 intent = new Intent(context,LoginActivity.class);
                 //remove all previous stack activities
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        showSamples.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(context,SamplesActivity.class);
+                //remove all previous stack activities
+                //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 finish();
             }

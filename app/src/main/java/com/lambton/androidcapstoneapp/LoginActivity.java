@@ -56,6 +56,7 @@ public class LoginActivity extends MainActivity {
         email = emailEt.getText().toString();
         password = passwordEt.getText().toString();
 
+
         if (email.length()==0){
             Toast.makeText(context,"Invalid Email Address",Toast.LENGTH_SHORT).show();
             return;

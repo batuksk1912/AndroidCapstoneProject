@@ -98,6 +98,7 @@
         android:padding="5dp"
         android:text="Already have an account? Sign in now."
         android:textColor="@color/white"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"

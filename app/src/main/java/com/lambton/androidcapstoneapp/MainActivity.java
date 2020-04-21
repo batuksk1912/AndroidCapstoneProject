@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     String SHARED_PREF_NAME ="user_pref";
     SharedPreferences.Editor sharedPrefEditor;
     protected String name,email,password;
+    protected String batch_name,client,submitted_by,due_date;
+
 
     protected boolean isLoggedIn(){
         return sharedPreferences.getBoolean("login",false);

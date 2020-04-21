@@ -112,7 +112,7 @@ public class SignupActivity extends MainActivity {
 
                     //Move to home activity
                     intent = new Intent(context,HomeActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                     finish();
                 }
