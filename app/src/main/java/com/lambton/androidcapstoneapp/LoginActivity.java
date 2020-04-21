@@ -72,11 +72,11 @@ public class LoginActivity extends MainActivity {
 
         //all inputs are validated now perform login request
         RequestParams params = new RequestParams();
-        params.add("type","login");
+        //params.add("type","login");
         params.add("email",email);
         params.add("password",password);
         Log.d("Login Parameters",params.toString()+"");
-        WebReq.post(context, "api.php", params, new LoginActivity.ResponseHandler());
+        WebReq.post(context, "login", params, new LoginActivity.ResponseHandler());
     }
 
     private class ResponseHandler extends JsonHttpResponseHandler {
